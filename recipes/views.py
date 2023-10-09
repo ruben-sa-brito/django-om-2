@@ -4,10 +4,6 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'home.html')
-
-
-def contato(request):
-    return HttpResponse('Página de contato')
-
+    context = {'name': 'eoq mlk'}
+    return render(request, 'recipes/pages/home.html', context)
 

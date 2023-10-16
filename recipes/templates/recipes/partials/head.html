@@ -72,7 +72,8 @@
             
             font-size: 1.6rem;
             font-family: var(--font-primary);
-            background: var(--color-gray-1)
+            background: var(--color-gray-1);
+            color: var(--color-dark-text);
             
         }
 
@@ -160,7 +161,6 @@
         }
 
         .main-content {
-            background-color: blue;
             padding-top: 0;
         }
 
@@ -170,7 +170,87 @@
             gap: var(--spacing-gutter-large);
         }
 
-        
+        .recipe{
+            max-width: 100%;
+            background: var(--color-white);
+            box-shadow: -5px 5px 15px rgba(0, 0, 0, .3);
+            transition: all 300ms ease-in-out;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .recipe img{
+            max-width: 100%;
+        }
+
+        .recipe-list-item{
+            max-width: 50rem;
+        }
+
+        .recipe-list-item:hover{
+            transform: scale(1.01);
+            box-shadow: -8px 8px 15px rgba(0, 0, 0, .25);
+            
+        }
+
+        .recipe-title-container {
+            padding: var(--spacing-gutter-medium);
+            padding-bottom: calc(var(--spacing-gutter-medium)/2);
+        }
+
+        .recipe-content {
+            padding: var(--spacing-gutter-medium);
+
+        }
+
+        .recipe-author {
+            padding: 0 var(--spacing-gutter-medium);
+
+        }
+
+        .recipe-author-item {
+            color: var(--color-gray-4);
+            margin-right: 1rem;
+        }
+
+        .recipe-author a {
+            color: var(--color-primary);
+            transition: all 300ms ease-in-out;
+            text-decoration: none;
+        }
+
+        .recipe-author a:hover {
+            color: var(--color-dark)
+        }
+
+        .recipe-meta-container {
+            display: flex;
+            flex-flow: row wrap;
+            padding: var(--spacing-gutter-medium);
+            background:var(--color-gray-1)
+        }
+
+        .recipe-meta {
+            display: flex;
+            flex-flow: column nowrap;
+            flex-shrink: 1;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .recipe-meta-title {
+            font-size: 1.6rem;
+        }
+
+        .recipe-footer a{
+            background: var(--color-primary-dark);
+            display: block;
+            flex-flow: row nowrap;
+            color: var(--color-white);
+            text-decoration: none;
+            text-align: center;
+            padding: 1.5rem var(--spacing-gutter-medium);
+        }
 
 
 

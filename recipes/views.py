@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import Http404
 from utils.recipes.factory import make_recipe
 from .models import Recipe
 
@@ -26,6 +26,11 @@ def category(request, category_id):
         is_published=True
         ).order_by('-id')
     
+    if not recipes:
+        raise Http404('not found 😢')
     
-    return render(request, 'recipes/pages/category.html', context = {'recipes':recipes})
+    
+    return render(request, 'recipes/pages/category.html', context = {'recipes':recipes,
+                                                                     'title':f'{recipes.first().category.name} - Category | '
+                                                                     })
 
